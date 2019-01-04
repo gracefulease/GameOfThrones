@@ -1,0 +1,311 @@
+macro "macro"
+	elem 
+		name = "North+REP"
+		command = ".north"
+	elem 
+		name = "South+REP"
+		command = ".south"
+	elem 
+		name = "East+REP"
+		command = ".east"
+	elem 
+		name = "West+REP"
+		command = ".west"
+	elem 
+		name = "Northeast+REP"
+		command = ".northeast"
+	elem 
+		name = "Northwest+REP"
+		command = ".northwest"
+	elem 
+		name = "Southeast+REP"
+		command = ".southeast"
+	elem 
+		name = "Southwest+REP"
+		command = ".southwest"
+	elem 
+		name = "Center+REP"
+		command = ".center"
+
+
+menu "menu"
+	elem 
+		name = "&Quit"
+		command = ".quit"
+		category = "&File"
+		saved-params = "is-checked"
+
+
+window "armyPieces"
+	elem "armyPieces"
+		type = MAIN
+		pos = 281,0
+		size = 126x66
+		anchor1 = none
+		anchor2 = none
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Muster"
+		statusbar = false
+		can-close = false
+		can-minimize = false
+		can-resize = false
+	elem "apMap"
+		type = MAP
+		pos = 0,0
+		size = 126x66
+		anchor1 = none
+		anchor2 = none
+		text-color = none
+		saved-params = "icon-size"
+
+window "cards"
+	elem "cards"
+		type = MAIN
+		pos = 281,0
+		size = 384x256
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Cards of Westeros"
+		statusbar = false
+		can-resize = false
+		icon = 'winIcons\\main.png'
+	elem "card3"
+		type = OUTPUT
+		pos = 256,128
+		size = 128x128
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = "max-lines"
+	elem "card2"
+		type = OUTPUT
+		pos = 128,128
+		size = 128x128
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = "max-lines"
+	elem "card1"
+		type = OUTPUT
+		pos = 0,128
+		size = 128x128
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = "max-lines"
+	elem "cmap"
+		type = MAP
+		pos = 0,0
+		size = 384x128
+		anchor1 = none
+		anchor2 = none
+		text-color = none
+		drop-zone = false
+		saved-params = "icon-size"
+
+window "debug"
+	elem "debug"
+		type = MAIN
+		pos = 1233,0
+		size = 369x232
+		anchor1 = none
+		anchor2 = none
+		background-color = none
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		titlebar = false
+		statusbar = false
+		can-resize = false
+	elem "info1"
+		type = INFO
+		pos = 5,4
+		size = 362x220
+		anchor1 = none
+		anchor2 = none
+		saved-params = ""
+		tab-background-color = none
+
+window "default"
+	elem "default"
+		type = MAIN
+		pos = 281,0
+		size = 1024x768
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-default = true
+		drop-zone = true
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Game Of Thrones - The Board Game"
+		statusbar = false
+		icon = 'winIcons\\main.png'
+		macro = "macro"
+		menu = "menu"
+	elem "chat"
+		type = INPUT
+		pos = 768,496
+		size = 256x24
+		anchor1 = 100,100
+		anchor2 = none
+		border = sunken
+		saved-params = ""
+		command = "say"
+	elem "utility"
+		type = MAP
+		pos = 768,658
+		size = 256x110
+		anchor1 = 100,100
+		anchor2 = none
+		border = sunken
+		saved-params = "icon-size"
+		icon-size = 32
+		zoom = 1
+	elem "scoreboard"
+		type = MAP
+		pos = 768,520
+		size = 256x138
+		anchor1 = 100,100
+		anchor2 = none
+		border = sunken
+		saved-params = "icon-size"
+		icon-size = 32
+		zoom = 1
+	elem "output1"
+		type = OUTPUT
+		pos = 768,0
+		size = 256x496
+		anchor1 = 100,0
+		anchor2 = 100,100
+		font-family = "Garamond"
+		font-size = 10
+		is-default = true
+		border = sunken
+		saved-params = "max-lines"
+	elem "main"
+		type = MAP
+		pos = 0,0
+		size = 768x768
+		anchor1 = 0,0
+		anchor2 = 100,100
+		is-default = true
+		saved-params = "icon-size"
+		on-size = "onResize"
+
+window "houseCards"
+	elem "houseCards"
+		type = MAIN
+		pos = 281,0
+		size = 640x530
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+	elem "enemyTitle"
+		type = LABEL
+		pos = 216,275
+		size = 208x20
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = "Enemy House Cards"
+	elem "label1"
+		type = LABEL
+		pos = 216,0
+		size = 208x24
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		saved-params = ""
+		text = "Your House Cards"
+		text-wrap = true
+	elem "enemyHouse"
+		type = GRID
+		pos = 0,294
+		size = 640x234
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		drop-zone = false
+		saved-params = ""
+		cells = 4x7
+		highlight-color = #ffff00
+		style = "BIG IMG.icon {width: 32px; height: 32px}"
+	elem "myHouse"
+		type = GRID
+		pos = 0,25
+		size = 640x234
+		anchor1 = none
+		anchor2 = none
+		text-color = #ffffff
+		background-color = #000000
+		border = line
+		drop-zone = false
+		saved-params = ""
+		cells = 4x7
+		highlight-color = #ffff00
+		style = "BIG IMG.icon {width: 32px; height: 32px}"
+
+window "supplyAndVictory"
+	elem "supplyAndVictory"
+		type = MAIN
+		pos = 281,0
+		size = 256x320
+		anchor1 = none
+		anchor2 = none
+		background-color = #000000
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Supply and Victory Tracks"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+		icon = 'winIcons\\supVic.png'
+	elem "supMap"
+		type = MAP
+		pos = 0,0
+		size = 256x320
+		anchor1 = none
+		anchor2 = none
+		text-color = none
+		saved-params = "icon-size"
+
+window "wildlingAttack"
+	elem "wildlingAttack"
+		type = MAIN
+		pos = 281,0
+		size = 224x64
+		anchor1 = none
+		anchor2 = none
+		is-visible = false
+		saved-params = "pos;size;is-minimized;is-maximized"
+		title = "Wildling Attack"
+		statusbar = false
+		can-minimize = false
+		can-resize = false
+	elem "wildlingChoice"
+		type = MAP
+		pos = 0,0
+		size = 224x64
+		anchor1 = 0,0
+		anchor2 = 100,100
+		text-color = none
+		saved-params = "icon-size"
+		icon-size = 32
+		zoom = 1
+

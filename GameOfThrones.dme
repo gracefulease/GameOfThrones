@@ -1,0 +1,51 @@
+// DM Environment file for GameOfThrones.dme.
+// All manual changes should be made outside the BEGIN_ and END_ blocks.
+// New source code should be placed in .dm files: choose File/New --> Code File.
+
+// BEGIN_INTERNALS
+// END_INTERNALS
+
+// BEGIN_FILE_DIR
+#define FILE_DIR .
+#define FILE_DIR "winIcons"
+// END_FILE_DIR
+
+// BEGIN_PREFERENCES
+#define DEBUG
+// END_PREFERENCES
+
+// BEGIN_INCLUDE
+#include "_defines.dm"
+#include "AI.dm"
+#include "areas.dm"
+#include "Battle.dm"
+#include "Cards.dm"
+#include "chat.dm"
+#include "CoKCard.dm"
+#include "Comms.dm"
+#include "debug.dm"
+#include "disableAreas.dm"
+#include "Dominance.dm"
+#include "EndPhase.dm"
+#include "Font1.dm"
+#include "gameTurn.dm"
+#include "HouseCards.dm"
+#include "HUD.dm"
+#include "Lobby.dm"
+#include "Main.dm"
+#include "MouseProcs.dm"
+#include "npcGarrisons.dm"
+#include "piecesArmy.dm"
+#include "piecesGarrison.dm"
+#include "piecesInfluence.dm"
+#include "piecesOrders.dm"
+#include "player.dm"
+#include "ports.dm"
+#include "scoreboard.dm"
+#include "turfs.dm"
+#include "WildlingAttack.dm"
+#include "Main.dmf"
+#include "Westeros.dmm"
+#include "macros.dms"
+// END_INCLUDE
+
